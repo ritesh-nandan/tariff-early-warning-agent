@@ -1,0 +1,18 @@
+sku,description,hts_code,country_of_origin,unit_cost_usd,annual_units
+OIL-CRD-01,Crude petroleum oil 25 degrees API or more (per barrel),2709.00.20.90,Brazil,70.00,200000
+PHA-PAT-02,Patented antiviral tablets containing acyclovir (pharmaceutical),3004.90.92.03,Germany,12.00,80000
+UAS-HVY-03,Heavy-lift cargo drone over 25 kg take-off weight,8806.24.00.00,China,18000.00,40
+TRK-HVY-04,Heavy-duty diesel trucks over 20 metric tons GVW,8704.23.01.00,Mexico,95000.00,30
+TRC-RD-05,Road tractors for semi-trailers (trucks),8701.21.00.15,Mexico,110000.00,20
+CAR-PAS-06,Passenger vehicle 1500-3000 cc,8703.23.01.30,Japan,24000.00,200
+LUM-PIN-07,Rough sawn pine softwood lumber (per cubic meter),4407.11.00.42,Canada,450.00,5000
+CAB-KIT-08,Wooden kitchen cabinets for permanent installation,9403.40.90.60,Vietnam,180.00,6000
+SOF-UPH-09,Upholstered wooden-frame household chairs,9401.61.40.11,China,140.00,5000
+STL-HRC-10,Hot-rolled steel sheet under 3 mm (per metric ton),7208.39.00.30,Brazil,780.00,3000
+ALU-SHT-11,Aluminum alloy sheet not clad (per metric ton),7606.12.30.35,China,3100.00,800
+CU-WIR-12,Refined copper wire 6-9.5 mm (per kg),7408.11.60.00,Chile,9.50,150000
+SEM-CPU-13,Central processing units (semiconductor chips),8542.31.00.45,Taiwan,180.00,20000
+SEM-EQP-14,Semiconductor wafer manufacturing machine,8486.20.00.00,Japan,450000.00,4
+SOL-MOD-15,Crystalline silicon solar modules 400 W,8541.43.00.10,China,95.00,20000
+PSI-RAW-16,Polysilicon 99.99% purity (per kg),2804.61.00.00,China,28.00,50000
+COF-BRA-17,Green arabica coffee beans (per kg),0901.11.00.25,Brazil,4.10,300000

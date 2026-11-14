@@ -68,6 +68,12 @@ def test_derivative_match_is_weak_and_flagged_unverified_offline():
     assert "Unverified" in matched[0][1].reason
 
 
+def test_crude_oil_api_gravity_is_not_a_pharmaceutical():
+    oil = Product("OIL", "Crude petroleum oil 25 degrees API or more", "2709002090", "Brazil", 70, 10)
+    t = threat(title="Adjusting Imports of Pharmaceuticals and Pharmaceutical Ingredients Into the United States")
+    assert matcher.match_product(oil, t) is None
+
+
 def test_load_products_valid_and_errors():
     text = "sku,description,hts_code,country_of_origin,unit_cost_usd,annual_units\nA,Thing,7318.15.20.30,China,$1.50,\"1,000\"\n"
     p = matcher.load_products(text)[0]

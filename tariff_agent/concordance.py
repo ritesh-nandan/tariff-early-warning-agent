@@ -23,7 +23,7 @@ TOPICS: dict[str, dict] = {
     "wind_turbines": {"notice": r"wind turbines?", "hts": ["850231", "841290", "730820"],
                       "product": r"wind[- ](?:turbine|powered)"},
     "pharmaceuticals": {"notice": r"pharmaceutical", "hts": ["30", "2936", "2937", "2941"],
-                        "product": r"pharmaceutical|\bAPI\b|medicament"},
+                        "product": r"pharmaceutical|medicament"},
     "semiconductors": {"notice": r"semiconductor", "hts": ["8541", "8542", "8486"],
                        "product": r"semiconductor|integrated circuit|\bchips?\b"},
     "critical_minerals": {"notice": r"critical minerals?", "hts": ["2504", "2605", "2805", "2825", "8105", "8112"],
