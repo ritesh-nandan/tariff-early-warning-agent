@@ -1,0 +1,77 @@
+name: Tariff early-warning run
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"   # every Monday 12:00 UTC
+  workflow_dispatch:        # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tariff-agent
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest -q
+
+      # Keep the SQLite database between runs so notices already read by the LLM
+      # are not paid for again. A new cache entry is saved after every run.
+      - name: Restore database
+        uses: actions/cache@v4
+        with:
+          path: data/tariffs.db
+          key: tariffs-db-${{ github.run_id }}
+          restore-keys: tariffs-db-
+
+      - name: Run pipeline
+        env:
+          # Set in Settings > Secrets and variables > Actions. If the secret is
+          # missing the pipeline runs in offline (rule-based) mode.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL || 'claude-fable-5-2' }}
+          TARIFF_MAX_LLM_DOCS: ${{ vars.TARIFF_MAX_LLM_DOCS || '0' }}
+        run: python run.py
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site/reports
+          cp dashboard/index.html _site/index.html
+          cp reports/*.md _site/reports/
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Keep run outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: tariff-run-${{ github.run_id }}
+          path: |
+            dashboard/index.html
+            reports/
+            logs/llm_calls.jsonl

@@ -1,0 +1,23 @@
+sku,description,hts_code,country_of_origin,unit_cost_usd,annual_units
+STL-BOLT-01,Structural steel bolts M12 zinc plated,7318.15.20.30,China,0.42,600000
+STL-RACK-02,Steel wire kitchen storage rack,7323.93.00.80,Vietnam,6.80,40000
+ALU-EXTR-03,Aluminum alloy extruded profiles for window frames,7604.29.10.10,Mexico,14.50,25000
+ALU-BAKE-04,Aluminum bakeware sheet pans,7615.10.71.30,China,3.90,60000
+CU-FIT-05,Copper alloy pipe fittings,7412.20.00.35,Germany,2.75,80000
+CU-TUBE-06,Refined copper tube 6-16 mm for HVAC,7411.10.10.30,Chile,9.20,30000
+PSI-RAW-07,Polysilicon 99.99% purity (per kg),2804.61.00.00,Germany,28.00,12000
+SOL-MOD-08,Crystalline silicon solar modules 400 W,8541.43.00.10,Malaysia,95.00,4000
+UAS-CAM-09,Camera drone 250 g to 7 kg take-off weight,8806.22.00.00,China,410.00,1500
+UAS-AG-10,Agricultural spraying drone 7 to 25 kg take-off weight,8806.23.00.00,China,3200.00,120
+WND-GEN-11,Small wind-powered generating set 10 kW,8502.31.00.00,Denmark,5400.00,60
+WND-PART-12,Stator and rotor parts for wind turbine generators,8503.00.95.46,Spain,310.00,900
+PHA-PEN-13,Penicillin G potassium active pharmaceutical ingredient (per kg),2941.10.20.00,India,38.00,5000
+PHA-IBU-14,Ibuprofen active pharmaceutical ingredient (per kg),2916.39.15.00,India,11.50,20000
+ELE-LAP-15,Laptop computers 14 inch,8471.30.01.00,Taiwan,520.00,2500
+ELE-CPU-16,Central processing units (semiconductor chips),8542.31.00.45,Taiwan,180.00,3000
+ELE-PSU-17,Switching power supplies for electronics,8504.40.95.80,China,12.40,45000
+ROB-ARM-18,Six-axis industrial robot arm,8479.50.00.00,Japan,21000.00,12
+COF-GRN-19,Green arabica coffee beans (per kg),0901.11.00.25,Colombia,4.10,90000
+TEE-COT-20,Men's cotton knit T-shirts,6109.10.00.12,Bangladesh,2.60,120000
+BOOK-HC-21,Printed hardcover books,4901.99.00.93,United Kingdom,3.20,30000
+TOY-BLK-22,Plastic building block toy sets,9503.00.00.73,Vietnam,5.50,50000

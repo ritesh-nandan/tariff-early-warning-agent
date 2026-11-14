@@ -1,0 +1,85 @@
+{
+  "_note": "Real 2025-2026 US tariff changes used for the backtest. change_date is the date the action was signed (or, for agency notices, took effect); the agent only sees Federal Register documents published before it. outcome 'duty' = a new or higher duty was imposed; 'no_duty' = the investigation ended without a duty.",
+  "events": [
+    {
+      "id": "copper_232",
+      "name": "Section 232 copper tariff (Proclamation 10962)",
+      "authority": "232",
+      "topics": ["copper"],
+      "action_doc": "2025-14893",
+      "change_date": "2025-07-30",
+      "outcome": "duty",
+      "skus": ["CU-FIT-05", "CU-TUBE-06"]
+    },
+    {
+      "id": "steel_aluminum_50",
+      "name": "Steel and aluminum Section 232 rate raised from 25% to 50%",
+      "authority": "232",
+      "topics": ["steel", "aluminum"],
+      "action_doc": "2025-10524",
+      "change_date": "2025-06-03",
+      "outcome": "duty",
+      "skus": ["STL-BOLT-01", "STL-RACK-02", "ALU-EXTR-03", "ALU-BAKE-04"]
+    },
+    {
+      "id": "section_122_surcharge",
+      "name": "Section 122 temporary import surcharge (10%, 24 Feb - 24 Jul 2026)",
+      "authority": "122",
+      "topics": ["import_surcharge_122"],
+      "action_doc": "2026-03824",
+      "change_date": "2026-02-20",
+      "outcome": "duty",
+      "skus": ["TEE-COT-20", "TOY-BLK-22", "COF-GRN-19", "BOOK-HC-21"]
+    },
+    {
+      "id": "pharma_232",
+      "name": "Section 232 pharmaceuticals tariff",
+      "authority": "232",
+      "topics": ["pharmaceuticals"],
+      "action_doc": "2026-06956",
+      "change_date": "2026-04-02",
+      "outcome": "duty",
+      "skus": ["PHA-PEN-13", "PHA-IBU-14"]
+    },
+    {
+      "id": "section_301_replacement",
+      "name": "Section 301 duties on 60 economies replacing the expiring Section 122 surcharge",
+      "authority": "301",
+      "topics": ["301_forced_labor"],
+      "action_doc": "2026-15181",
+      "change_date": "2026-07-24",
+      "outcome": "duty",
+      "skus": ["TEE-COT-20", "TOY-BLK-22", "COF-GRN-19", "BOOK-HC-21"]
+    },
+    {
+      "id": "polysilicon_232",
+      "name": "Section 232 polysilicon and derivatives tariff",
+      "authority": "232",
+      "topics": ["polysilicon"],
+      "action_doc": "2026-16400",
+      "change_date": "2026-08-06",
+      "outcome": "duty",
+      "skus": ["PSI-RAW-07", "SOL-MOD-08"]
+    },
+    {
+      "id": "uas_232",
+      "name": "Section 232 unmanned aircraft systems (drones) tariff",
+      "authority": "232",
+      "topics": ["unmanned_aircraft"],
+      "action_doc": "2026-16979",
+      "change_date": "2026-08-13",
+      "outcome": "duty",
+      "skus": ["UAS-CAM-09", "UAS-AG-10"]
+    },
+    {
+      "id": "wind_232_no_duty",
+      "name": "Section 232 wind turbines: investigation closed with negotiations, no duty",
+      "authority": "232",
+      "topics": ["wind_turbines"],
+      "action_doc": "2026-22049",
+      "change_date": "2026-10-22",
+      "outcome": "no_duty",
+      "skus": ["WND-GEN-11", "WND-PART-12"]
+    }
+  ]
+}
